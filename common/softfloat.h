@@ -1,4 +1,4 @@
-/*	$Id: softfloat.h,v 1.11 2018/11/11 11:10:27 ragge Exp $	*/
+/*	$Id: softfloat.h,v 1.12 2018/11/14 20:12:50 ragge Exp $	*/
 
 /*
  * Copyright (c) 2015 Anders Magnusson. All rights reserved.
@@ -44,9 +44,6 @@ typedef struct softfloat {
 		long double debugfp;
 #endif
 	};
-	unsigned long long significand;
-	short exponent;
-	short kind;
 } SF;
 typedef SF *SFP;
 
