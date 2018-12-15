@@ -1,4 +1,4 @@
-.\"	$Id$
+.\"	$Id: ccom.1,v 1.32 2018/12/15 08:55:25 plunky Exp $
 .\"
 .\" Copyright (c) 2007 Jeremy C. Reed <reed@reedmedia.net>
 .\"
@@ -148,6 +148,9 @@ Enable
 .Ar warning ,
 and treat it as an error condition.
 If a specific warning is not given, producing any warning will cause an error.
+.It Sy attributes
+Warn when unsupported attributes are used.
+This warning is enabled by default.
 .It Sy deprecated-declarations
 Report whenever a symbol marked with the
 .Sq deprecated
