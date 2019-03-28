@@ -1,4 +1,4 @@
-/*	$Id: softfloat.c,v 1.44 2019/03/27 18:22:21 ragge Exp $	*/
+/*	$Id: softfloat.c,v 1.45 2019/03/28 19:50:53 ragge Exp $	*/
 
 /*
  * Copyright (c) 2008 Anders Magnusson. All rights reserved.
@@ -340,8 +340,6 @@ FPI fpi_binary32 = {
 	.unmake = ieee32_unmake,
 	.classify = ieee32_classify,
 };
-#else
-#error need float definition
 #endif
 
 #ifdef USE_IEEEFP_64
@@ -433,8 +431,6 @@ FPI fpi_binary64 = {
 	.unmake = ieee64_unmake,
 	.classify = ieee64_classify,
 };      
-#else
-#error need double definition
 #endif
 
 #ifdef USE_IEEEFP_X80
