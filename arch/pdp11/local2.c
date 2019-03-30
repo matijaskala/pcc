@@ -1,4 +1,4 @@
-/*	$Id$	*/
+/*	$Id: local2.c,v 1.12 2019/03/30 16:15:23 ragge Exp $	*/
 /*
  * Copyright (c) 2003 Anders Magnusson (ragge@ludd.luth.se).
  * All rights reserved.
@@ -590,11 +590,13 @@ fixops(NODE *p, void *arg)
 		p->n_right = mkunode(UMINUS, p->n_right, 0, p->n_right->n_type);
 		p->n_op = LS;
 		break;
+#if 0
 	case EQ:
 	case NE: /* Hack not to clear bits if FORCC */
 		if (p->n_left->n_op == AND)
 			fixops(p->n_left, 0); /* Convert an extra time */
 		break;
+#endif
 	}
 }
 
