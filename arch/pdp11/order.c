@@ -1,4 +1,4 @@
-/*	$Id: order.c,v 1.12 2019/04/22 09:20:42 ragge Exp $	*/
+/*	$Id: order.c,v 1.13 2019/04/25 17:40:33 ragge Exp $	*/
 /*
  * Copyright (c) 2003 Anders Magnusson (ragge@ludd.luth.se).
  * All rights reserved.
@@ -188,7 +188,8 @@ nspecial(struct optab *q)
 			    { NLEFT, R1 }, { NRES, R1 }, { 0 } };
 			return s;
 		} else if (q->visit == INBREG) {
-			static struct rspecial s[] = { { NRES, R01 }, { 0 } };
+			static struct rspecial s[] = {
+			    { NEVER, R0 }, { NEVER, R1 },{ NRES, R01 }, { 0 } };
 			return s;
 		}
 		break;
@@ -205,7 +206,8 @@ nspecial(struct optab *q)
 			    { 0 } };
 			return s;
 		} else if (q->visit == INBREG) {
-			static struct rspecial s[] = { { NRES, R01 }, { 0 } };
+			static struct rspecial s[] = {
+			    { NEVER, R0 }, { NEVER, R1 },{ NRES, R01 }, { 0 } };
 			return s;
 		}
 		break;
@@ -222,7 +224,8 @@ nspecial(struct optab *q)
 			    { 0 } };
 			return s;
 		} else if (q->visit == INBREG) {
-			static struct rspecial s[] = { { NRES, R01 }, { 0 } };
+			static struct rspecial s[] = {
+			    { NEVER, R0 }, { NEVER, R1 },{ NRES, R01 }, { 0 } };
 			return s;
 		}
 		break;
