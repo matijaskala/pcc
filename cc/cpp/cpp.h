@@ -1,4 +1,4 @@
-/*	$Id: cpp.h,v 1.113 2019/12/14 15:03:16 ragge Exp $	*/
+/*	$Id: cpp.h,v 1.114 2020/01/31 21:24:19 ragge Exp $	*/
 
 /*
  * Copyright (c) 2004,2010 Anders Magnusson (ragge@ludd.luth.se).
@@ -142,7 +142,8 @@ struct includ {
 	int lineno;
 	int escln;		/* escaped newlines, to be added */
 	int infil;
-	struct iobuf *ib;
+	int opend, oinp;
+	usch *opbeg;
 	int idx;
 	void *incs;
 	const usch *fn;
@@ -154,6 +155,7 @@ struct includ {
 #define SYSINC 1
 
 extern struct includ *ifiles;
+extern usch *pbeg, *pend, *outp, *inp;
 
 /* Symbol table entry  */
 struct symtab {
