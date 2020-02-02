@@ -1,5 +1,5 @@
 %{
-/*	$Id$	*/
+/*	$Id: scan.l,v 1.11 2020/02/02 09:52:32 ragge Exp $	*/
 
 /*
  * Copyright (c) 2002 Anders Magnusson. All rights reserved.
@@ -223,7 +223,7 @@ L?\"(\\.|[^\\"])*\"	{ yylval.strp = yytext; return C_STRING; }
 
 %%
 
-int lineno, issyshdr;
+int issyshdr;
 char *ftitle = "<stdin>";
 
 static int
